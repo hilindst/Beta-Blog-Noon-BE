@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+"Adding config/credentials/development.key to store the encryption key: 0b307430682bb03e9414796cf5090b9d"

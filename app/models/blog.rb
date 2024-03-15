@@ -1,6 +1,7 @@
 class Blog < ApplicationRecord
   include Rails.application.routes.url_helpers
   belongs_to :user
+  has_many :likes, as: :likeable
 
   validates :title, presence: true
   validates :content, presence: true
@@ -14,4 +15,8 @@ class Blog < ApplicationRecord
     rails_blob_url(self.cover_image, only_path: false) if self.cover_image.attached?
   end
 
+  def liked?(user)
+    self.likes.where(user: user).exists?
+  end
+  
 end

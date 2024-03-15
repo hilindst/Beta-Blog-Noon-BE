@@ -42,6 +42,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'pusher'
   # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 end
@@ -52,5 +53,5 @@ group :development do
 end
 
 group :production do 
-  gem 'pg'
+  # gem 'pg'
 end
